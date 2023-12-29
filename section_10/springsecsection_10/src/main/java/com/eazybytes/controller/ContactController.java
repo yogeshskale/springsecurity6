@@ -1,5 +1,6 @@
 package com.eazybytes.controller;
 
+import java.security.SecureRandom;
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +36,7 @@ public class ContactController {
     }
 
     public String getServiceReqNumber() {
-        Random random = new Random();
+        Random random = new SecureRandom();
         int ranNum = random.nextInt(999999999 - 9999) + 9999;
         return "SR"+ranNum;
     }
